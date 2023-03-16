@@ -1,0 +1,86 @@
+[debug] [2023-03-16T20:35:36.826Z] ----------------------------------------------------------------------
+[debug] [2023-03-16T20:35:36.828Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\AERO 15\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-03-16T20:35:36.828Z] CLI Version:   11.16.1
+[debug] [2023-03-16T20:35:36.829Z] Platform:      win32
+[debug] [2023-03-16T20:35:36.829Z] Node Version:  v16.13.2
+[debug] [2023-03-16T20:35:36.829Z] Time:          Thu Mar 16 2023 21:35:36 GMT+0100 (غرينتش+01:00)
+[debug] [2023-03-16T20:35:36.830Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-16T20:35:36.899Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-16T20:35:36.899Z] > authorizing via signed-in user (m.elayyachi@enim.ac.ma)
+[debug] [2023-03-16T20:35:36.899Z] [iam] checking project independance-17f6c for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-03-16T20:35:36.901Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/independance-17f6c:testIamPermissions [none]
+[debug] [2023-03-16T20:35:36.902Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/independance-17f6c:testIamPermissions x-goog-quota-user=projects/independance-17f6c
+[debug] [2023-03-16T20:35:36.902Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/independance-17f6c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:35:42.096Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/independance-17f6c:testIamPermissions 200
+[debug] [2023-03-16T20:35:42.096Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/independance-17f6c:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-03-16T20:35:42.098Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/independance-17f6c [none]
+[debug] [2023-03-16T20:35:44.167Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/independance-17f6c 200
+[debug] [2023-03-16T20:35:44.167Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/independance-17f6c {"projectId":"independance-17f6c","projectNumber":"984314531282","displayName":"independance","name":"projects/independance-17f6c","resources":{"hostingSite":"independance-17f6c","storageBucket":"independance-17f6c.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_0a0a22b7-4fb3-41d1-8d81-217f951c655d"}
+[info] 
+[info] === Deploying to 'independance-17f6c'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2023-03-16T20:35:44.174Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions [none]
+[debug] [2023-03-16T20:35:44.174Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2023-03-16T20:35:49.641Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions 200
+[debug] [2023-03-16T20:35:49.641Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions {"name":"projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[independance-17f6c]: beginning deploy... 
+[info] i  hosting[independance-17f6c]: found 14 files in dist 
+[debug] [2023-03-16T20:35:49.656Z] [hosting] uploading with 200 concurrency
+[debug] [2023-03-16T20:35:49.663Z] [hosting] hash cache [ZGlzdA] stored for 14 files
+[debug] [2023-03-16T20:35:49.663Z] [hosting][hash queue][FINAL] {"max":2,"min":0,"avg":0,"active":0,"complete":14,"success":14,"errored":0,"retried":0,"total":14,"elapsed":4}
+[debug] [2023-03-16T20:35:49.664Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5:populateFiles [none]
+[debug] [2023-03-16T20:35:49.664Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5:populateFiles {"files":{"/index.html":"29555a9254a61b2f8a54fe1e1ca94efcac79b99a1e81e7cc94e3aa21aa2b441b","/pop-over/3rdpartylicenses.txt":"84f1dd3e9293c3f035be645963935aa6d0c7175effd76000a0beb3babc3acc2a","/pop-over/favicon.ico":"2c19690e9587bae12f419b34d2edeecc76808099540a9c9f4ea6194116cfc8f7","/pop-over/fontawesome-webfont.2b13baa7dd4f54c9.eot":"4944999b255adf473d5b86b300eba33737e8f598c17f24e82a28582393331209","/pop-over/fontawesome-webfont.8a7cb27d142e3e19.ttf":"d9cef07d4f3569883fb4c3db76acea5478cef80775d012841eb78a42e60a8e89","/pop-over/fontawesome-webfont.cf011583fb81df9f.woff":"b51c2c79cce89b7c5947672c13f735c24ee1a9f8f6ebdb957c5fdfe567f27d37","/pop-over/fontawesome-webfont.da909aa098b0ee2d.svg":"9b74ca5333a9ca156ae6ef0920d5bc42d283e95d25651bf4375404f0407a63ab","/pop-over/fontawesome-webfont.e9955780856cf8aa.woff2":"38d88317bebc79b4945a679daadd47daebbadc5cd13b41473143394ca7e8d892","/pop-over/index.html":"e6494e9f020186878c8f4aa04dc4ff66ac386afe15af867e0d1b60deb6d93bb5","/pop-over/main.4a24bea64aa93545.js":"d79b4acbedaab376e9cd5727a2570b12875f1804495c41969d81f8e955840ee3","/pop-over/polyfills.9ce6eb187f771cfd.js":"7c0664ae09d54be86850f6ee41670ce66458d31c84b91c35927105a4fe531ee2","/pop-over/runtime.d92c55ce912142df.js":"f5501af0e6c0b803a8a74d18893263863cc3a4a82323fa16f01b40e9dcc28fe1","/pop-over/scripts.8c755a8534daf31e.js":"bc9cb55b68741cbf52d7d6d12f5344ba7d9d7c2f617c786714307f5901fa7114","/pop-over/styles.76412673139143d5.css":"b3bdf2ab0f3650f8d8183c599496e777181ef1b003205eda2167e706e7a134fa"}}
+[debug] [2023-03-16T20:35:51.057Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5:populateFiles 200
+[debug] [2023-03-16T20:35:51.057Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5:populateFiles {"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/independance-17f6c/versions/728984587bb973b5/files"}
+[debug] [2023-03-16T20:35:51.057Z] [hosting][populate queue][FINAL] {"max":1396,"min":1396,"avg":1396,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1396}
+[debug] [2023-03-16T20:35:51.058Z] [hosting] uploads queued: 0
+[debug] [2023-03-16T20:35:51.058Z] [hosting][upload queue][FINAL] {"max":0,"min":9999999999,"avg":0,"active":0,"complete":0,"success":0,"errored":0,"retried":0,"total":0,"elapsed":1678998951058}
+[info] +  hosting[independance-17f6c]: file upload complete 
+[debug] [2023-03-16T20:35:51.059Z] [hosting] deploy completed after 1415ms
+[debug] [2023-03-16T20:35:51.062Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "independance-17f6c"
+    },
+    "version": "projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5"
+  }
+]
+[info] i  hosting[independance-17f6c]: finalizing version... 
+[debug] [2023-03-16T20:35:51.066Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions/728984587bb973b5 updateMask=status%2Cconfig
+[debug] [2023-03-16T20:35:51.066Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions/728984587bb973b5 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2023-03-16T20:35:52.359Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions/728984587bb973b5 200
+[debug] [2023-03-16T20:35:52.360Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/versions/728984587bb973b5 {"name":"projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-16T20:35:45.963815Z","createUser":{"email":"m.elayyachi@enim.ac.ma"},"finalizeTime":"2023-03-16T20:35:49.549849Z","finalizeUser":{"email":"m.elayyachi@enim.ac.ma"}}
+[debug] [2023-03-16T20:35:52.360Z] [hosting] finalized version for independance-17f6c:[object Object]
+[info] +  hosting[independance-17f6c]: version finalized 
+[info] i  hosting[independance-17f6c]: releasing new version... 
+[debug] [2023-03-16T20:35:52.362Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/channels/live/releases versionName=projects%2F984314531282%2Fsites%2Findependance-17f6c%2Fversions%2F728984587bb973b5
+[debug] [2023-03-16T20:35:52.363Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/channels/live/releases {}
+[debug] [2023-03-16T20:35:53.811Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/channels/live/releases 200
+[debug] [2023-03-16T20:35:53.812Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/independance-17f6c/channels/live/releases {"name":"projects/984314531282/sites/independance-17f6c/channels/live/releases/1678998950039000","version":{"name":"projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-16T20:35:45.963815Z","createUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"},"finalizeTime":"2023-03-16T20:35:49.549849Z","finalizeUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"}},"type":"DEPLOY","releaseTime":"2023-03-16T20:35:50.039Z","releaseUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"}}
+[debug] [2023-03-16T20:35:53.812Z] [hosting] release: {"name":"projects/984314531282/sites/independance-17f6c/channels/live/releases/1678998950039000","version":{"name":"projects/984314531282/sites/independance-17f6c/versions/728984587bb973b5","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2023-03-16T20:35:45.963815Z","createUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"},"finalizeTime":"2023-03-16T20:35:49.549849Z","finalizeUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"}},"type":"DEPLOY","releaseTime":"2023-03-16T20:35:50.039Z","releaseUser":{"email":"m.elayyachi@enim.ac.ma","imageUrl":"https://lh3.googleusercontent.com/a/AGNmyxZ8-s0bsHCnYiiEyJ9Vaf23SbMwAuknYLfGJxVx=mo"}}
+[info] +  hosting[independance-17f6c]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/independance-17f6c/overview
+[info] Hosting URL: https://independance-17f6c.web.app
+[debug] [2023-03-16T20:36:08.731Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\AERO 15\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7)
+[error] 
+[error] Error: An unexpected error has occurred.

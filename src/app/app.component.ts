@@ -33,42 +33,42 @@ export class AppComponent implements OnInit {
     private fb: FormBuilder
 ) {}
 
-popperOptions = (options: Partial<Options>) => {
-  // customize placement
-  options.placement = 'bottom';
+// popperOptions = (options: Partial<Options>) => {
+//   // customize placement
+//   options.placement = 'bottom';
 
-  // customize modifiers
-  for (const modifier of options.modifiers || []) {
-    // disable flip
-    if (modifier.name === 'flip') {
-      modifier.enabled = false;
-    }
+//   // customize modifiers
+//   for (const modifier of options.modifiers || []) {
+//     // disable flip
+//     if (modifier.name === 'flip') {
+//       modifier.enabled = false;
+//     }
 
-    // customize offset
-    if (modifier.name === 'offset' && modifier.options) {
-      // modifier.options.offset = () => [20, 20];
-    }
-  }
+//     // customize offset
+//     if (modifier.name === 'offset' && modifier.options) {
+//       // modifier.options.offset = () => [20, 20];
+//     }
+//   }
 
-  // add your own modifier
-  options.modifiers?.push({
-    name: 'custom',
-    enabled: true,
-    phase: 'main',
-    fn: ({ state }) => {
-      console.log('custom modifier');
-    },
-  });
+//   // add your own modifier
+//   options.modifiers?.push({
+//     name: 'custom',
+//     enabled: true,
+//     phase: 'main',
+//     fn: ({ state }) => {
+//       console.log('custom modifier');
+//     },
+//   });
 
-  // first update callback
-  options.onFirstUpdate = (state) => {
-    console.log('onFirstUpdate', state);
-    if (state.elements?.arrow) {
-      state.elements.arrow.style.display = 'none';
-    }
-  };
-  return options;
-};
+//   // first update callback
+//   options.onFirstUpdate = (state) => {
+//     console.log('onFirstUpdate', state);
+//     if (state.elements?.arrow) {
+//       state.elements.arrow.style.display = 'none';
+//     }
+//   };
+//   return options;
+// };
 
   ngOnInit(): void {
     // this.test = new Popover(document.querySelector('.example-popover'), {
