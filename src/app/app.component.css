@@ -1,0 +1,82 @@
+
+.button-size{
+  height: 3.4em;
+  font-size: large;
+
+}
+
+.button-size:hover{
+  color: #fff;
+  /* -webkit-transform: scale(1.1); */
+
+}
+
+.font-mon{
+  font-family: 'Montserrat';
+  color: #000;
+}
+
+.button-import{
+  font-size: 3.4em;
+  --bs-btn-bg : #fff
+}
+
+.button-import:hover{
+  color: #fff;
+}
+
+
+.button-prec{
+  --bs-btn-border-color : #000;
+  --bs-btn-bg : #fff;
+}
+
+.card{
+  margin-top: 40px;
+}
+
+a{
+  text-decoration: none;
+}
+
+#top{
+  text-align: center ;
+  font-family: 'Montserrat';
+  font-weight: 900;
+  background-image: linear-gradient(to left, #0741a2, #0741a2);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+
+.fa-info-circle{
+  color: black;
+}
+.popUp{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
+::ng-deep .popover-arrow{
+  transform: translate(260%) !important;
+}
+::ng-deep .popover {
+  --bs-popover-bg : #ffc107;
+  text-align: center;
+  margin-left: 12% !important;
+}
+
+
+@media screen and (max-width: 780px) {
+  ::ng-deep .popover {
+    margin-left: 14% !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  ::ng-deep .popover {
+    margin-left: 17% !important;
+  }
+}
